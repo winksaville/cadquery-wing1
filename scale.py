@@ -13,5 +13,5 @@ def scaleTuple(t, v):
 
 def scaleListOfTuple(l, v):
     """Scale the elements list of tuples by v"""
-    return list(map(lambda t: scaleTupleZ(t, v), l))
+    return list(map(lambda t: scaleTuple(t, v), l))
 
