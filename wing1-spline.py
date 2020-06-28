@@ -66,3 +66,7 @@ fMh49: List[Tuple[float, float]] = fattenTe(sMh49, 0.5, 10)
 
 result = cq.Workplane("XY").spline(fMh49).close().extrude(span)
 #pprint(vars(result))
+import io
+f = io.open('wing1-spline-direct-0.001.stl', 'w+')
+cq.exporters.exportShape(result, cq.exporters.ExportTypes.STL, f, 0.001)
+f.close()
