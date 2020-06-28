@@ -64,5 +64,5 @@ sMh49: List[Tuple[float, float]] = scaleListOfTuple(nMh49, chord)
 fMh49: List[Tuple[float, float]] = fattenTe(sMh49, 0.5, 10)
 #print(f'FATTENed fMh49={fMh49}')
 
-result = cq.Workplane("XY").polyline(fMh49).close().extrude(span)
+result = cq.Workplane("XY").spline(fMh49).close().extrude(span)
 #pprint(vars(result))
